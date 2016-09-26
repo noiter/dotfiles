@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/usr/local/etc/nginx'
+let g:netrw_dirhist_2='/usr/local/Cellar/autojump'
+let g:netrw_dirhist_3='/usr/local/etc/ansible'
+let g:netrw_dirhist_4='/Users/mzhao/.oh-my-zsh'
+let g:netrw_dirhist_5='/Users/mzhao/Projects/front-end/webpack'
+let g:netrw_dirhist_6='/Users/mzhao/Projects/front-end/webpack/node_modules'
+let g:netrw_dirhist_7='/Users/mzhao/Projects/front-end/webpack'
