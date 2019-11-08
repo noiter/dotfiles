@@ -75,17 +75,40 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$PATH:/Users/mzhao/Local/bin"
 
 # Mysql setting
-export PATH="$PATH:/usr/local/mysql/bin"
+# export PATH="$PATH:/usr/local/mysql/bin"
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/id_rsa"
 
 # Java Home Path
-# export JAVA_HOME=$(/usr/libexec/java_home -v 1.7.0_79)
-# export PATH="$JAVA_HOME/bin:$PATH"
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0_111)
+export PATH="$JAVA_HOME/bin:$PATH"
 
-# postgres
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+# Groovy Home
+export GROOVY_HOME=/Users/mzhao/Local/groovy-2.4.12
+export PATH=$GROOVY_HOME/bin:$PATH
+
+# Maven settings
+export M2_HOME=/Users/mzhao/Local/apache-maven-3.3.9
+export PATH=$PATH:$M2_HOME/bin
+
+# Gradle settings
+export GRADLE_HOME=/Users/mzhao/Local/gradle-4.10.2
+export PATH=$GRADLE_HOME/bin:$PATH
+
+# Pyenv settings
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# For compilers to find zlib you may need to set:
+export LDFLAGS="${LDFLAGS} -L/usr/local/opt/zlib/lib -L/usr/local/opt/sqlite/lib"
+export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/zlib/include -I/usr/local/opt/sqlite/include"
+
+# For pkg-config to find zlib you may need to set:
+export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/zlib/lib/pkgconfig"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -99,6 +122,15 @@ alias cls="clear"
 alias gst="git stash"
 alias gsp="git stash pop"
 alias gs="git status"
+alias pgstart="pg_ctl -D /usr/local/var/postgres start"
+alias pgstop="pg_ctl -D /usr/local/var/postgres stop -m fast"
+alias pgrestart="pg_ctl -D /usr/local/var/postgres -w restart"
 alias flushdns='dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say flushed'
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# eval "$(direnv hook $0)"
