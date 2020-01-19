@@ -110,6 +110,12 @@ export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/zlib/include -I/usr/local/opt/sqli
 # For pkg-config to find zlib you may need to set:
 export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/zlib/lib/pkgconfig"
 
+# Miniconda
+export PATH=/opt/miniconda3/bin:$PATH
+
+# GraalVM
+# export PATH=/Users/mzhao/Local/graalvm-ce-java11-19.3.0/bin:$PATH
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
